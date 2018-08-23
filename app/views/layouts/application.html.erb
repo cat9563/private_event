@@ -19,7 +19,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   '#' %></li>
             <li><%= link_to "Users",   '#' %></li>
-            <li><%= link_to "Events",   '#' %></li>
+            <li><%= link_to "Events", events_path %></li>
             <% if logged_in? %>
     <li><%= link_to "Log out", logout_path, method: :delete %></li>
     <!-- <li class="dropdown">

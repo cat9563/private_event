@@ -1,0 +1,13 @@
+<%= form_for(@event) do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: 'form-control' %>
+
+  <p> date field will go here </p>
+
+  <%= f.submit "Save changes", class: "btn btn-primary" %>
+
+  <% end %>
