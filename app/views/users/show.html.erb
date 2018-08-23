@@ -6,8 +6,15 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <p>
-        <%= @user.events %>
+
+      <ul id="events">
+        <% @user.events.each do |event| %>
+          <li>
+            <%= event.title %>
+          </li>
+        <% end %>
+      </ul>
+      
     </section>
   </aside>
 </div>
