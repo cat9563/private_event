@@ -8,8 +8,8 @@ module UsersHelper
   end
 
   #Returns the list of events user created
-  def list_events(user)
-    @events.each do |event|
-    event.title
-  end
+  # def list_events(user)
+  #   @events.each do |event|
+  #   event.title
+  # end
 end
