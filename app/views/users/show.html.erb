@@ -14,7 +14,17 @@
           </li>
         <% end %>
       </ul>
-      
+
+      <h2> Attened Events </h2>
+      <ul id="events">
+
+        <% @events.attendees.each do |attendee| %>
+        <li>
+          <%= link_to attendee.name, user_path(attendee.id) %>
+        </li>
+        <% end %>
+      </ul>
+
     </section>
   </aside>
 </div>
