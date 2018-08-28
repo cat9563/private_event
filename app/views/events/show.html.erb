@@ -5,13 +5,23 @@
       <h1>
         <%= @events.creator.name %>
       </h1>
-      
+
       <h1>
         <%= @events.title %>
       </h1>
         <p>
           <%= @events.description %>
         </p>
+
+        <h2> whos attending </h2>
+        <ul id="events">
+
+          <% @events.attendees.each do |attendee| %>
+          <li>
+            <%= link_to attendee.name, user_path(attendee.id) %>
+          </li>
+          <% end %>
+        </ul>
     </section>
   </aside>
 </div>
