@@ -7,20 +7,12 @@
         <%= @user.name %>
       </h1>
 
+      <h2> Events your hosting </h2>
       <ul id="events">
+
         <% @user.events.each do |event| %>
-          <li>
-            <%= event.title %>
-          </li>
-        <% end %>
-      </ul>
-
-      <h2> Attened Events </h2>
-      <ul id="events">
-
-        <% @events.attendees.each do |attendee| %>
         <li>
-          <%= link_to attendee.name, user_path(attendee.id) %>
+          <%= link_to event.title, event_path(event.id) %>
         </li>
         <% end %>
       </ul>
