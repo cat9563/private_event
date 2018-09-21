@@ -10,11 +10,15 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+    UserMailer.with(user: @user).welcome_email.deliver_later
+
+    flash[:info] = "You've got mail"
     redirect_to root_url
     else
     render users_new_path
+    end
   end
-  end
+
 
   private
 
